@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sim!</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            position: relative;
+        }
+        video {
+            max-width: 100%;
+            max-height: 100%;
+            border: 2px solid #fff;
+            display: none;
+        }
+        button {
+            position: absolute;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <button id="playButton">Iniciar Vídeo</button>
+    <video id="video" controls>
+        <source src="Vídeo do WhatsApp de 2025-01-09 à(s) 11.51.19_0c581c21.mp4" type="video/mp4">
+        Seu navegador não suporta a reprodução de vídeos.
+    </video>
+
+    <script>
+        const playButton = document.getElementById('playButton');
+        const video = document.getElementById('video');
+
+        playButton.addEventListener('click', () => {
+            video.style.display = 'block'; // Mostra o vídeo
+            playButton.style.display = 'none'; // Esconde o botão
+            video.play(); // Reproduz o vídeo com som
+        });
+    </script>
+</body>
+</html>
